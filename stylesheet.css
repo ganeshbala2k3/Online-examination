@@ -1,0 +1,31 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: skyblue;
+}
+nav
+{
+    background-image: linear-gradient(yellow,red);
+}
+nav .Navtitle
+{
+    color:black;
+    overflow: auto;
+    font-family: fantasy;
+}
+nav .NavOptions ul
+{
+   float: right;
+   list-style: none;
+}
+nav .NavOptions li{
+    display: inline-block;
+    padding: 10px;
+    text-decoration:none;
+    
+}
