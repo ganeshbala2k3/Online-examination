@@ -10,22 +10,44 @@ body
 }
 nav
 {
-    background-image: linear-gradient(yellow,red);
+    line-height: 75px;
+    height: 75px;
+    width: 100%;
+    padding:0 50px;
+    background-image: linear-gradient(tan,red)
+    ;
+    cursor: pointer;
 }
 nav .Navtitle
 {
     color:black;
-    overflow: auto;
-    font-family: fantasy;
+    font-family:'Times New Roman', Times, serif;
+    float: left;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 10px white;
 }
-nav .NavOptions ul
-{
-   float: right;
-   list-style: none;
-}
-nav .NavOptions li{
-    display: inline-block;
-    padding: 10px;
-    text-decoration:none;
+nav .Navtitle:hover{
+    color: white;
+    transition: all 0.4s ease 0s;
     
 }
+nav ul
+{
+   float:right;
+}
+nav li{
+    padding:0 10px 10px 10px;
+    list-style: none;
+    display: inline-block;
+    text-decoration:none; 
+    font-size: 20px;  
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: black;
+   transition: all 0.4s ease 0s;
+}
+

@@ -1,0 +1,87 @@
+*
+{
+    box-sizing: border-box;
+}
+nav
+{
+    line-height: 75px;
+    height: 75px;
+    width: 100%;
+    padding: 0 50px;
+    background-image: linear-gradient(tan,red);
+    cursor: pointer;
+}
+nav .Navtitle
+{
+    color:black;
+    font-family:'Times New Roman', Times, serif;
+    float: left;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 10px white;
+}
+nav .Navtitle:hover{
+    color: white;
+    transition: all 0.4s ease 0s;
+    
+}
+nav ul
+{
+   float:right;
+}
+nav li{
+    padding:0 10px 10px 10px;
+    list-style: none;
+    display: inline-block;
+    text-decoration:none; 
+    font-size: 20px;  
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: black;
+   transition: all 0.4s ease 0s;
+}
+#loginpagetitle{
+    margin-left: 60;
+    margin-right: 60;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: green;
+    text-shadow: 3px 3px 5px black;
+}
+
+.loginclass
+{
+    height: 300px;
+    margin: 60;
+    background-color: skyblue;
+    border-style: solid;
+    border-radius: 30px;
+    overflow:visible;
+    padding:50px;
+    text-align:center;
+    line-height: 30px;
+    
+}
+label{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#login,#signup{
+    color: blue;
+    
+}
+footer{
+    width: 100%;
+    background-color: tan;
+    height: 150px;
+    margin: 20% 0 0 0;
+    text-align: center;
+    border-style: solid;
+    font-size: larger;
+
+}
