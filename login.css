@@ -1,26 +1,31 @@
 *
 {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(#feada6,#f5efef);
 }
 nav
 {
     line-height: 75px;
     height: 75px;
     width: 100%;
-    padding: 0 50px;
-    background-image: linear-gradient(tan,red);
+    padding:0 50px;
+    background-image:linear-gradient(135deg, black 30%, DeepSkyBlue 100%);
     cursor: pointer;
 }
 nav .Navtitle
 {
-    color:black;
+    color:white;
     font-family:'Times New Roman', Times, serif;
     float: left;
     letter-spacing: 1px;
     text-shadow: 5px 5px 10px white;
 }
 nav .Navtitle:hover{
-    color: white;
+    color: yellow;
     transition: all 0.4s ease 0s;
     
 }
@@ -58,13 +63,13 @@ nav a:hover{
 {
     height: 300px;
     margin: 60;
-    background-color: skyblue;
+    background-image: linear-gradient(#bdc3c7,#2c3e50);
     border-style: solid;
     border-radius: 30px;
     overflow:visible;
     padding:50px;
     text-align:center;
-    line-height: 30px;
+    line-height: 60px;
     
 }
 label{
