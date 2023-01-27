@@ -6,6 +6,7 @@
 }
 body{
     background-image: linear-gradient(#feada6,#f5efef);
+  
 }
 nav
 {
@@ -88,5 +89,5 @@ footer{
     text-align: center;
     border-style: solid;
     font-size: larger;
-
 }
+
