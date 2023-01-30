@@ -62,15 +62,17 @@ nav a:hover{
 
 .loginclass
 {
-    height: 300px;
-    margin: 60;
+    height: 500px;
+    margin-left: 200px;
+    margin-right: 200px;
     background-image: linear-gradient(#bdc3c7,#2c3e50);
     border-style: solid;
     border-radius: 30px;
     overflow:visible;
     padding:50px;
     text-align:center;
-    line-height: 60px;
+    line-height: 30px;
+   
     
 }
 label{

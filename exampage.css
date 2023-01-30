@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#homedirect{
+    float: right;
+}
+h1{
+    text-align: center;
+    background-image: linear-gradient(yellow,skyblue);
+    border-style: solid;
+    border-radius: 500px;
+    margin-left: 100;
+    margin-right: 100;
+}
+ol{
+    background-color: skyblue;
+    border-style: solid;
+    border-radius: 50px;
+    overflow: auto;
+    padding-left: 70px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+p{
+    font-size: larger;
+    font-weight: bold;
+
+}
+#submit,#reset{
+    width: 60px;
+    height: 30px;
+    color: blue;
+    font-weight: bold;
+    background-color:orange;
+    margin-top: 100px;
+   
+}
+

@@ -4,6 +4,13 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
+p{
+    font-weight: bold;
+    color: blue;
+}
 
 nav
 {
@@ -16,8 +23,9 @@ nav
 }
 nav .Navtitle
 {
+    margin-left: 20px;
     color:white;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     float: left;
     letter-spacing: 1px;
     text-shadow: 5px 5px 10px white;
@@ -26,6 +34,10 @@ nav .Navtitle:hover{
     color: yellow;
     transition: all 0.4s ease 0s;
     
+}
+nav #navlogo{
+    float: left;
+    padding-top: 10px;
 }
 nav ul
 {
@@ -63,6 +75,7 @@ padding-right: 10px;
     text-shadow: 3px 3px 3px black;
 }
 .flex-container{
+   
     display: flex;
     height: 150px;
     width: 100%;
@@ -74,6 +87,7 @@ padding-right: 10px;
 
 }
 .flex-item{
+    border-radius: 20px;
     width: 175px;
     height: 75px;
     background-color: lightskyblue;
