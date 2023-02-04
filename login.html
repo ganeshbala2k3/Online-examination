@@ -8,26 +8,23 @@
         function validate() {
             var uname = document.getElementById("username");
             var pass = document.getElementById("password");
-            if (uname.value.trim()=="")
-            {
-                uname.style.border="solid 5px red";
-                pass.style.border="solid 5px red";
-                document.getElementById("userlabel").style.visibility="visible";
-                document.getElementById("passwordlabel").style.visibility="visible";
+            if (uname.value.trim() == "") {
+                uname.style.border = "solid 5px red";
+                pass.style.border = "solid 5px red";
+                document.getElementById("userlabel").style.visibility = "visible";
+                document.getElementById("passwordlabel").style.visibility = "visible";
                 return false;
             }
-            else if(pass.value.trim()=="")
-            {
-             document.getElementById("passwordlabel").style.visibility="visible";
-             pass.style.border="solid 5px red";
-              return false;
-            }
-            else if(uname.value.length<6)
-            {
-                document.getElementById("lettercount").style.visibility="visible";
+            else if (pass.value.trim() == "") {
+                document.getElementById("passwordlabel").style.visibility = "visible";
+                pass.style.border = "solid 5px red";
                 return false;
             }
-            else{
+            else if (uname.value.length < 6) {
+                document.getElementById("lettercount").style.visibility = "visible";
+                return false;
+            }
+            else {
                 true;
             }
         }
@@ -54,22 +51,35 @@
     <br>
     <form onsubmit="return validate()" action="index.html">
         <div class="loginclass">
-            <label for="username">Enter your username </label>
-            <input type="text" id="username" placeholder="Username">
-            <label for="username" id="userlabel" style="color: black; visibility:hidden;font-family: Georgia, 'Times New Roman';">Invalid username</label>
-            <br>
-            <label for="username" id="lettercount" style="visibility: hidden; color: red;">Enter more than 6 letters</label>
-            <br>
-            <label for="password">Enter the password</label>
-            <input type="password" id="password" placeholder="Password">
-            <label for="password" id="passwordlabel" style="color: black; visibility:hidden; font-family: Georgia, 'Times New Roman', Times, serif;">Invalid password</label>
-            <br>
-            <input type="checkbox" required id="terms">
-            <label for="terms"><a href="#">Terms & Conditions</a></label>
-            <br>
-            <input type="submit" id="submit">
+            <div class="usernamebox">
+                <label for="username">Enter your username :</label>
+                <input type="text" id="username" placeholder="Username">
+                <label for="username" id="userlabel"
+                    style="color: black; visibility:hidden;font-family: Georgia, 'Times New Roman';">Invalid
+                    username</label>
+                <br>
+                <label for="username" id="lettercount" style="visibility: hidden; color: red;">Enter more than 6
+                    letters</label>
+                <br>
+            </div>
+            <div class="usernamebox">
+                <label for="password">Enter the password :</label>
+                <input type="password" id="password" placeholder="Password">
+                <label for="password" id="passwordlabel"
+                    style="color: black; visibility:hidden; font-family: Georgia, 'Times New Roman', Times, serif;">Invalid
+                    password</label>
+                <br>
+            </div>
+            <div class="usernamebox">
+                <input type="checkbox" required id="terms">
+                <label for="terms"><a href="#">Terms & Conditions</a></label>
+                <br>
+                <br>
+                <input type="submit" id="submit">
+            </div>
+        </div>
+
     </form>
-    </div>
 
     <footer>
         <br>

@@ -6,7 +6,7 @@
 }
 body{
     background-image: linear-gradient(#feada6,#f5efef);
-  
+
 }
 nav
 {
@@ -62,19 +62,34 @@ nav a:hover{
 
 .loginclass
 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 500px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
     background-image: linear-gradient(#bdc3c7,#2c3e50);
     border-style: solid;
     border-radius: 30px;
-    overflow:visible;
-    padding:50px;
-    text-align:center;
-    line-height: 30px;
-   
     
+    padding:50px;
+    line-height: 20px;
 }
+.usernamebox
+{
+    border-sty;
+    text-align: center;
+    line-height: 30px;
+}
+#submit
+{
+    width: 70px;
+    height: 30px;
+    font-family: bolder;
+    font-size: 20px;
+
+}
+
 label{
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -83,6 +98,12 @@ label{
     color: blue;
     
 }
+input
+{
+    border:solid 1px black;
+    
+}
+
 footer{
     width: 100%;
     background-color: tan;
@@ -92,4 +113,5 @@ footer{
     border-style: solid;
     font-size: larger;
 }
+
 

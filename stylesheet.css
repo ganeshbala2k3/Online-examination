@@ -161,7 +161,14 @@ h2{
 }
 .exam01{
     border-style: solid;
+    border-radius: 90px;
    background-image: linear-gradient(#ff9a9e,#fecfef);
+}
+.exam01 h3{
+    background-color: white;
+    border-radius: 90px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 footer{
     background-color: tan;
