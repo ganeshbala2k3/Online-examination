@@ -49,11 +49,11 @@
     </h1>
     <br>
     <br>
-    <form onsubmit="return validate()" action="index.html">
+    <form onsubmit="return validate()" action="loginservlet.jsp" method="post">
         <div class="loginclass">
             <div class="usernamebox">
                 <label for="username">Enter your username :</label>
-                <input type="text" id="username" placeholder="Username">
+                <input type="text" id="username" placeholder="Username" name="username">
                 <label for="username" id="userlabel"
                     style="color: black; visibility:hidden;font-family: Georgia, 'Times New Roman';">Invalid
                     username</label>
@@ -64,7 +64,7 @@
             </div>
             <div class="usernamebox">
                 <label for="password">Enter the password :</label>
-                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="password" placeholder="Password" name="password">
                 <label for="password" id="passwordlabel"
                     style="color: black; visibility:hidden; font-family: Georgia, 'Times New Roman', Times, serif;">Invalid
                     password</label>
@@ -75,7 +75,8 @@
                 <label for="terms"><a href="#">Terms & Conditions</a></label>
                 <br>
                 <br>
-                <input type="submit" id="submit">
+                <input type="submit"  id="submit" name="submit
+                ">
             </div>
         </div>
 

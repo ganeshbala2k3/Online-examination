@@ -33,7 +33,6 @@ nav .Navtitle
 nav .Navtitle:hover{
     color: yellow;
     transition: all 0.4s ease 0s;
-    
 }
 nav #navlogo{
     float: left;
@@ -46,7 +45,7 @@ nav ul
 nav li{
     padding:0 10px 10px 10px;
     list-style: none;
-    display: inline-block;
+    display:inline-block;
     text-decoration:none; 
     font-size: 20px;  
 }
@@ -96,7 +95,6 @@ padding-right: 10px;
     line-height: 60px;
     color: black;
     font-weight: bold;
-   
 }
 #flex-item-1
 {
@@ -171,14 +169,35 @@ h2{
     margin-right: 200px;
 }
 footer{
+   
     background-color: tan;
     text-align: center;
     font-weight: bold;
     width: 100%;
 }
+.submenu{
+display: none;
+}
+nav .NavOptions ul li:hover .submenu{
+    display: block;
+    position:absolute;
+   
+    
+}
+nav .NavOptions ul li:hover .submenu li{
+    display: block;
+    line-height: 30px;
+    width: 80px;
+    background-color: #006283;
+    color: white;
+    font-size: 20px;  
+    text-align: center;
+    padding-bottom: 10px;
+    border: solid 0.1px black;
+    
+}
+nav .NavOptions ul li:hover .submenu li:hover{
+  color:black;
+  transition: all 0.4s ease 0s;
 
-
-
-
-
-
+}
