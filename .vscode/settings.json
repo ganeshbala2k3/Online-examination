@@ -1,0 +1,8 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ganes\\Downloads\\ojdbc10.jar",
+        "c:\\Users\\ganes\\Downloads\\servlet.jar"
+    ]
+}
