@@ -103,6 +103,7 @@ input
     
 }
 
+
 footer{
     width: 100%;
     background-color: tan;
@@ -111,6 +112,15 @@ footer{
     text-align: center;
     border-style: solid;
     font-size: larger;
+}
+a{
+    text-decoration: none;
+}
+#labelforsignup
+{
+     font-size: small;
+     color: white;
+     font-weight: lighter;
 }
 
 

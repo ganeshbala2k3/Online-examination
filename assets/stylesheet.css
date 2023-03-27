@@ -4,9 +4,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    background-color: black;
-}
+
 p{
     font-weight: bold;
     color: blue;
@@ -201,3 +199,122 @@ nav .NavOptions ul li:hover .submenu li:hover{
   transition: all 0.4s ease 0s;
 
 }
+.Header-univeristy-link
+{
+    background-color: red;
+    text-align: center;
+    height: 20px;
+}
+.Header-univeristy-link a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+
+}
+.latest-exams
+{
+    height: 250px;
+    width: 40%;
+    float: left;
+    border-style: solid;
+    margin-left: 80px;
+}
+#indexpageimage
+{
+    float: right;
+      border-radius: 100px;
+      margin-right: 80px;
+
+}
+.latest-exams .exam-1
+{
+    width: 100%;
+    border-style: solid;
+    height: 50px;
+    margin-top: 20px;
+    
+}
+.third-container
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 300px;
+    border:solid;
+}
+.AboutPortal
+{
+    height: 510px;
+    border: solid;
+    
+}
+.description
+{
+    height: 300px;
+    float: right;
+    width: 50%;
+    padding: 50px
+}
+.description p{
+    color: black;
+    font-size: large;
+}
+#aboutimage
+{
+    float: left;
+    width: 50%;
+    height: 300px;
+
+}
+.Dashboard
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: solid;
+}
+.AboutPortalinner
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.ImageGrid
+{
+    border-style: solid;  
+}
+.ImageGridContainer
+{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.ImageGridItem
+{
+    border: solid 5px;
+}
+.Question-form
+{
+    background-color: skyblue;
+    border-style: solid;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 30px;
+}
+form{
+    
+    font-weight: bold;
+    margin-left: 40%;
+}
+input
+{
+    margin: 10px;
+}
+.social-media-logo
+{
+    margin-left: 80%;
+}
+.social-media-logo a{
+     margin-left: 15px;
+}
+
