@@ -2,7 +2,38 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="/assets/login.css">
+    <link rel="stylesheet" href="assets/login.css">
+    <script>
+    function validatesignup()
+    {
+    	var uname=document.getElementById("username");
+    	var password=document.getElementById("password");
+    	var confirmpassword=document.getElementById("confirmpassword");
+    	var mobilenumber=document.getElementById("mobilenumber");
+    	
+    	if(uname.value.trim()=="" || uname.value.length <6)
+    		{
+    		alert("Invalid username entered");
+    		return false;
+    		}
+    	else if(password.value.trim()=="" || password.value.length <6)
+    	{
+    		alert("Invalid password entered");
+    		return false;
+    	}
+    	else if(password.localeCompare(confirmpassword)==0)
+    	{
+    		alert("Enter the same password in both password columns!!");
+    		return false;
+    	}
+    	else
+    		{
+    		true;
+    		}
+
+    	
+    }
+    </script>
 </head>
 
 
@@ -23,7 +54,7 @@
     </h1>
     <br>
     <br>
-    <form action="Login" method="get">
+    <form action="signUpDetails.jsp" onsubmit="return validatesignup()" method="post">
         <div class="loginclass">
             <div class="usernamebox">
                 <label for="username">Username :</label>
@@ -64,9 +95,9 @@
         <br>
         Electronics and computer science 
         <div class="social-media-logo">
-         <a href="https://www.linkedin.com/in/ganesh-bala-539004226/"><img src="/assets/images/linkedinlogo.png" width="25cm" height="25cm" alt="-"></a>
-         <a href="https://www.instagram.com/"><img src="/assets/images/instagramlogo.jpeg" width="25cm" height="25cm" alt="-"></a>
-         <a href="https://github.com/ganeshbala01"><img src="/assets/images/githublogo.png" width="25cm" height="25cm" alt="-"></a>
+         <a href="https://www.linkedin.com/in/ganesh-bala-539004226/"><img src="assets/images/linkedinlogo.png" width="25cm" height="25cm" alt="-"></a>
+         <a href="https://www.instagram.com/"><img src="assets/images/instagramlogo.jpeg" width="25cm" height="25cm" alt="-"></a>
+         <a href="https://github.com/ganeshbala01"><img src="assets/images/githublogo.png" width="25cm" height="25cm" alt="-"></a>
         </div>
 
     </footer>

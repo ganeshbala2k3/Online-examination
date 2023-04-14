@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(#feada6,#f5efef);
+
+}
+nav
+{
+    line-height: 75px;
+    height: 75px;
+    width: 100%;
+    padding:0 50px;
+    background-image:linear-gradient(135deg, black 30%, DeepSkyBlue 100%);
+    cursor: pointer;
+}
+nav .Navtitle
+{
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    float: left;
+    letter-spacing: 1px;
+    text-shadow: 5px 5px 10px white;
+}
+nav .Navtitle:hover{
+    color: yellow;
+    transition: all 0.4s ease 0s;
+    
+}
+nav ul
+{
+   float:right;
+}
+nav li{
+    padding:0 10px 10px 10px;
+    list-style: none;
+    display: inline-block;
+    text-decoration:none; 
+    font-size: 20px;  
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: black;
+   transition: all 0.4s ease 0s;
+}
+#loginpagetitle{
+    margin-left: 60;
+    margin-right: 60;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: green;
+    text-shadow: 3px 3px 5px black;
+}
+
+.loginclass
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-image: linear-gradient(#bdc3c7,#2c3e50);
+    border-style: solid;
+    border-radius: 30px;
+    
+    padding:50px;
+    line-height: 20px;
+}
+.usernamebox
+{
+    text-align: center;
+    line-height: 30px;
+}
+#submit
+{
+    width: 70px;
+    height: 30px;
+    font-family: bolder;
+    font-size: 20px;
+
+}
+
+label{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#login,#signup{
+    color: blue;
+    
+}
+input
+{
+    border:solid 1px black;
+    
+}
+
+
+footer{
+    width: 100%;
+    background-color: tan;
+    height: 150px;
+    margin: 20% 0 0 0;
+    text-align: center;
+    border-style: solid;
+    font-size: larger;
+}
+a{
+    text-decoration: none;
+}
+#labelforsignup
+{
+     font-size: small;
+     color: white;
+     font-weight: lighter;
+}
+
+

@@ -295,7 +295,7 @@ nav .NavOptions ul li:hover .submenu li:hover{
 }
 .Question-form
 {
-    background-color: skyblue;
+    background-image: linear-gradient(red,tan);
     border-style: solid;
     margin-left: 100px;
     margin-right: 100px;
