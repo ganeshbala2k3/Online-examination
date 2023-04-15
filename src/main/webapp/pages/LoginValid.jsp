@@ -19,10 +19,10 @@ rs.next();
 String temp= rs.getString(1);
 if(temp.contentEquals(password))
 {
-	RequestDispatcher rd= request.getRequestDispatcher("welcome.jsp");
-	  rd.forward(request,response);
+	HttpSession s= request.getSession();
+	s.setAttribute("t1",username);
 	response.sendRedirect("welcome.jsp");
 }
 %>
 </body>
-</html>
+</html>  

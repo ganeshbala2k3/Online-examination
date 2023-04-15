@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" import="java.sql.*" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
                 <li><a href="#">Home</a></li>
                 <li>
                     <div class="dropdown">
-                        <a href="">Practice</a>
+                        <a href="#">Practice</a>
                         <div class="submenu">
                             <ul>
                                 <li>Online</li>
@@ -40,7 +40,9 @@
                     </div>
                 </li>
                 <li><a href="https://payments-test.cashfree.com/links/L4c41juoqtfg">Payment</a></li>
-                <li><a href="#"><%=request.getParameter("username") %></a></li>
+                <li><a href="profile.jsp">
+                Profile                
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -51,8 +53,13 @@
             <img src="assets/images/banner_image.jpg" alt="No image found" id="bannerimage">
         </center>
         <h1>
-            Welcome to Online Examination Portal
+            Welcome to Online Examination Portal<br> <%HttpSession s=request.getSession();
+        String username=s.getAttribute("t1").toString();
+        out.print(username.toUpperCase());
+        
+        %>
         </h1>
+        
     </div>
     <div class="Dashboard" id="Dashboard">
         <h2>Dashboard</h2>
@@ -117,7 +124,7 @@
     </h3>
     <div class="Question-form">
         <center><h4>Feedback form for better development </h4></center>
-        <form action="submittedoutput.html">
+        <form action="welcome.jsp" method="post">
         <div class="Questionform-1">
         <label for="Name">Name :</label>
        <input type="text" name="Name" id="Name">
@@ -133,11 +140,32 @@
        <br>
        <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
        <br>
-       <label for="feedbackscreenshot" style="font-weight:lighter;">Found any bugs? Upload screenshot of bug</label>
-       <input type="file" name="feedbackscreenshot">
-       <br>
        <input type="submit" name="submit">
         </div>
+        <%
+   String name=request.getParameter("Name");
+   String email=request.getParameter("Email");
+   String number=request.getParameter("Mobile");
+   String message=request.getParameter("Message");
+   try
+   {
+   Class.forName("oracle.jdbc.driver.OracleDriver");  
+   Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+   String sql="insert into feedbackform values(?,?,?,?)";
+   PreparedStatement st=con.prepareStatement(sql);
+   st.setString(1,name);
+   st.setString(2,email);
+   st.setString(3,number);
+   st.setString(4,message);
+   int x=st.executeUpdate();
+   
+   }
+   catch(Exception e)
+   {
+	   
+   }
+   
+   %>
         </form>
     </div>
     <footer id="Footer">
