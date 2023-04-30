@@ -39,7 +39,7 @@ String num=rs.getString(1);
 <td><%out.print(num);%></td>
 </tr>
 </table>
-<a href="login.html">Forget Password</a>
+<a href="forgetpassword.jsp">Forget Password</a>
 <a href="index.html">Logout</a>
 </body>
 </html>

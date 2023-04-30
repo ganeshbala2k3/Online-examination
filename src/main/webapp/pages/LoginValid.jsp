@@ -19,10 +19,19 @@ rs.next();
 String temp= rs.getString(1);
 if(temp.contentEquals(password))
 {
+    if(username.contentEquals("ganesh")==true && temp.contentEquals("ganesh123")==true)
+    {
+    	HttpSession s= request.getSession();
+    	s.setAttribute("t1",username);
+    	response.sendRedirect("admin.jsp");
+    }
+    else
+    {
 	HttpSession s= request.getSession();
 	s.setAttribute("t1",username);
 	response.sendRedirect("welcome.jsp");
-}
+}}
+
 %>
 </body>
 </html>  

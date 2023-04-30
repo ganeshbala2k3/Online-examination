@@ -13,6 +13,15 @@
 </head>
 
 <body>
+<%
+Class.forName("oracle.jdbc.driver.OracleDriver");
+Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+PreparedStatement st1=con.prepareStatement("select subject_name from SubjectRegis order by Sno desc");
+/* st.setString(1,username); */
+ResultSet rs1= st1.executeQuery();
+rs1.next();
+String num=rs1.getString(1);
+%>
     <script src="script.js"></script>
     <div class="Header-univeristy-link">
         <a href="www.kluniversity.in">Klef</a>
@@ -57,6 +66,7 @@
         String username=s.getAttribute("t1").toString();
         out.print(username.toUpperCase());
         
+        
         %>
         </h1>
         
@@ -69,20 +79,27 @@
             <div class="flex-item" id="flex-item-3"><a href="#">Results</a></div>
             <div class="flex-item" id="flex-item-4"><a href="#">Resources</a></div>
         </div>
-    </div>
+    </div>  
     <div class="third-container">
         <div class="latest-exams">
             <center>
                 <h3>*Important*</h3>
             </center>
-            <div class="exam-1">
-                <a href="#">Exam link</a>
+           
+            <div class="exam-1">  
+            <a href="#"><%out.print(num);%></a>
+     	     
             </div>
             <div class="exam-1">
-                <a href="#">Exam link</a>
+                                    <a href="#"><% rs1.next();
+                                    out.print(rs1.getString(1));%></a>
+                        
+             
+            </a>
             </div>
             <div class="exam-1">
-                <a href="#">Exam link</a>
+            <a href="#"><% rs1.next();
+            out.print(rs1.getString(1));%></a>
             </div>
         </div>
         <img src="assets/images/examsindeximage.jpeg" alt="Image not found" id="indexpageimage">
@@ -108,17 +125,16 @@
         <center>
             <h1 style="background-color: red;">Features of Portal</h1>
         </center>
-        <div class="ImageGridContainer">
+  <div class="ImageGridContainer">
             <div class="ImageGridItem">
                 <img src="assets/images/imagegriditem-1.jpeg" width="250cm" height="250cm" alt="No image found">
             </div>
             <div class="ImageGridItem">
-                <img src="assets/images/imagegriditem-1.jpeg" width="250cm" height="250cm" alt="No image found">
+                <img src="assets/images/welcome_page_2.jpeg" width="250cm" height="250cm" alt="No image found">
             </div>
             <div class="ImageGridItem">
-                <img src="assets/images/imagegriditem-1.jpeg" width="250cm" height="250cm" alt="No image found">
+                <img src="assets/images/welcome_page_3.jpeg" width="250cm" height="250cm" alt="No image found">
             </div>
-        </div>
     </div>
     <h3>The best Online Exam Portal makes this process streamlined and simple.
     </h3>
@@ -149,8 +165,6 @@
    String message=request.getParameter("Message");
    try
    {
-   Class.forName("oracle.jdbc.driver.OracleDriver");  
-   Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
    String sql="insert into feedbackform values(?,?,?,?)";
    PreparedStatement st=con.prepareStatement(sql);
    st.setString(1,name);
