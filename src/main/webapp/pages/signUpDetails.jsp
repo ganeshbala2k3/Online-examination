@@ -21,7 +21,7 @@ st.setString(1,uname);
 st.setString(2,pass);
 st.setString(3,num);
 int x = st.executeUpdate();
-out.println("Count that has updated"+x);
+response.sendRedirect("login.html");
 }
 catch(Exception e)
 {

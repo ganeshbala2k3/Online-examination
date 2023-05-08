@@ -30,7 +30,12 @@ if(temp.contentEquals(password))
 	HttpSession s= request.getSession();
 	s.setAttribute("t1",username);
 	response.sendRedirect("welcome.jsp");
-}}
+}
+}
+    else
+    {
+    	response.sendRedirect("login.html");
+    }
 
 %>
 </body>

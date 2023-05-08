@@ -13,6 +13,23 @@
 </head>
 
 <body>
+<script>
+function get1()
+{
+	var number="1";
+	window.location.replace("welcome.jsp?mess="+number);
+}
+function get2()
+{
+	var number="2";
+	window.location.replace("welcome.jsp?mess="+number);
+}
+function get3()
+{
+	var number="3";
+	window.location.replace("welcome.jsp?mess="+number);
+}
+</script>
 <%
 Class.forName("oracle.jdbc.driver.OracleDriver");
 Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
@@ -21,6 +38,7 @@ PreparedStatement st1=con.prepareStatement("select subject_name from SubjectRegi
 ResultSet rs1= st1.executeQuery();
 rs1.next();
 String num=rs1.getString(1);
+HttpSession hsession= request.getSession();
 %>
     <script src="script.js"></script>
     <div class="Header-univeristy-link">
@@ -85,23 +103,38 @@ String num=rs1.getString(1);
             <center>
                 <h3>*Important*</h3>
             </center>
-           
             <div class="exam-1">  
-            <a href="#"><%out.print(num);%></a>
+            <a href="Exam.jsp" onclick="get1()">
+            <%
+            out.println(rs1.getString(1));
+            String temp1=rs1.getString(1);
+         hsession.setAttribute("demo1",temp1);
+            %></a>
+            </div>
+           <div class="exam-1">  
+            <a href="Exam.jsp" onclick="get2()">
+            <%
+            rs1.next();
+            out.println(rs1.getString(1));
+            String temp2=rs1.getString(1);
+         hsession.setAttribute("demo2",temp2);
+            %></a>
      	     
             </div>
-            <div class="exam-1">
-                                    <a href="#"><% rs1.next();
-                                    out.print(rs1.getString(1));%></a>
-                        
-             
-            </a>
-            </div>
-            <div class="exam-1">
-            <a href="#"><% rs1.next();
-            out.print(rs1.getString(1));%></a>
-            </div>
+         <div class="exam-1">  
+            <a href="Exam.jsp" onclick="get3()">
+            <%
+            rs1.next();
+            out.println(rs1.getString(1));
+            String temp3=rs1.getString(1);
+         hsession.setAttribute("demo3",temp3);
+            %></a>
         </div>
+        </div>
+        <%
+    	String number1=request.getParameter("mess");
+    	hsession.setAttribute("message", number1);
+    	%>
         <img src="assets/images/examsindeximage.jpeg" alt="Image not found" id="indexpageimage">
     </div>
     <br>
@@ -178,6 +211,7 @@ String num=rs1.getString(1);
    {
 	   
    }
+   
    
    %>
         </form>
